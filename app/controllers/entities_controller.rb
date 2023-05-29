@@ -22,6 +22,7 @@ class EntitiesController < ApplicationController
   # POST /entities or /entities.json
   def create
     @entity = Entity.new(entity_params)
+    @entity.user_id = current_user.id
 
     respond_to do |format|
       if @entity.save
