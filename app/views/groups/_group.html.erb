@@ -1,0 +1,13 @@
+
+
+<div>
+  <%= image_tag group.icon, alt: "Icon" %>
+  <div>
+    <h3><%= link_to group.name, group_entities_path(group) %></h3>
+    <p><%= group.created_at.strftime("%a, %d %b %Y %H:%M") %></p>
+  </div>
+  <p><%= group.entities.sum(&:amount) %></p>
+  <% if can? :manage, group %>
+    <%= button_to "Delete", group, method: :delete %>
+  <% end %>
+</div>

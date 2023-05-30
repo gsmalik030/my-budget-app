@@ -1,0 +1,25 @@
+<div id="<%= dom_id entity %>">
+  <p>
+    <%= @group.name %>
+  </p>
+
+  <p>
+    <%= @group.entities.sum(&:amount) %>$
+  </p>
+</div>
+
+<div>
+<%= image_tag @group.icon, alt: 'Icon'%>
+<div>
+<h5> <%= entity.name%></h5>
+<p><%= entity.created_at.strftime("%a, %d %b %Y %H:%M") %></p>
+</div>
+<div>
+<%=entity.amount%>
+<% if can? :manage, entity%>
+<%= button_to "Delete", group_entity_path(@group.id, entity), method: :delete%>
+<%end%>
+</div>
+</div>
+
+

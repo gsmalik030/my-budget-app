@@ -1,0 +1,25 @@
+<%= form_with(model: group_entity) do |form| %>
+  <% if group_entity.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(group_entity.errors.count, "error") %> prohibited this group_entity from being saved:</h2>
+
+      <ul>
+        <% group_entity.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+  <%= form.label :group_id%>
+  <%= form.collection_select :group_id, Group.all, :id, :name %>
+  </div>
+
+  <%= form.label :entity_id%>
+  <%= form.collection_select :entity_id, Entity.all, :id, :name%>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
