@@ -1,39 +1,39 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
 class GroupEntitiesTest < ApplicationSystemTestCase
   setup do
     @group_entity = group_entities(:one)
   end
 
-  test "visiting the index" do
+  test 'visiting the index' do
     visit group_entities_url
-    assert_selector "h1", text: "Group entities"
+    assert_selector 'h1', text: 'Group entities'
   end
 
-  test "should create group entity" do
+  test 'should create group entity' do
     visit group_entities_url
-    click_on "New group entity"
+    click_on 'New group entity'
 
-    click_on "Create Group entity"
+    click_on 'Create Group entity'
 
-    assert_text "Group entity was successfully created"
-    click_on "Back"
+    assert_text 'Group entity was successfully created'
+    click_on 'Back'
   end
 
-  test "should update Group entity" do
+  test 'should update Group entity' do
     visit group_entity_url(@group_entity)
-    click_on "Edit this group entity", match: :first
+    click_on 'Edit this group entity', match: :first
 
-    click_on "Update Group entity"
+    click_on 'Update Group entity'
 
-    assert_text "Group entity was successfully updated"
-    click_on "Back"
+    assert_text 'Group entity was successfully updated'
+    click_on 'Back'
   end
 
-  test "should destroy Group entity" do
+  test 'should destroy Group entity' do
     visit group_entity_url(@group_entity)
-    click_on "Destroy this group entity", match: :first
+    click_on 'Destroy this group entity', match: :first
 
-    assert_text "Group entity was successfully destroyed"
+    assert_text 'Group entity was successfully destroyed'
   end
 end

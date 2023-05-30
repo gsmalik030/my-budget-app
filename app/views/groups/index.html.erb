@@ -5,10 +5,7 @@
 <div id="groups">
   <% @groups.each do |group| %>
     <%= render group %>
-    <p>
-      <%= link_to "Show this group", group %>
-    </p>
   <% end %>
 </div>
 
-<%= link_to "New group", new_group_path %>
+<%= link_to "Add New Category", new_group_path %>
