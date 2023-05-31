@@ -15,7 +15,7 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
-    type: redis
+  - type: redis
     name: redis
     ipAllwList: []
     plan: free
