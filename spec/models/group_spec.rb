@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Group, type: :model do
   subject do
     user = User.create(name: 'malik', password: 'password', email: 'malik@gmail.com')
-    Group.new(name: 'Trip', icon: 'https://example.com', user: user)
+    Group.new(name: 'Trip', icon: 'https://example.com', user:)
   end
 
   before { subject.save }

@@ -17,10 +17,10 @@ gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
+  gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'letter_opener'
   gem 'rspec-rails'
-  gem 'database_cleaner'
 end
 
 group :development do

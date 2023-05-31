@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Entity, type: :model do
   subject do
     user = User.create(name: 'malik', password: 'password', email: 'malik@gmail.com')
-    Entity.new(name: 'abc', amount: 123.4, user: user)
+    Entity.new(name: 'abc', amount: 123.4, user:)
   end
 
   before { subject.save }

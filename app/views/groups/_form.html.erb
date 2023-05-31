@@ -1,3 +1,5 @@
+<div class="container">
+<h1 >New Category</h1>
 <%= form_with(model: group, data: {turbo: false}) do |form| %>
   <% if group.errors.any? %>
     <div style="color: red">
@@ -11,17 +13,19 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
+  <div class="field__box">
+    <%= form.label :name, style: "display: block", class: "email" %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
-    <%= form.label :icon, style: "display: block" %>
+  <div class="field__box">
+    <%= form.label :icon, style: "display: block", class: "email" %>
     <%= form.url_field :icon %>
   </div>
 
-  <div>
+  <div class="field__box new-group">
     <%= form.submit %>
   </div>
 <% end %>
+
+</div>

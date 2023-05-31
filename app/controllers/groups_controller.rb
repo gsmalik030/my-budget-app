@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
   # GET /groups or /groups.json
   def index
     if current_user
-      @groups =current_user.groups
+      @groups = current_user.groups
     else
       redirect_to new_user_session_path
     end
