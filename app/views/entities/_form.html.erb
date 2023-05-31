@@ -1,3 +1,5 @@
+<div class="container">
+<h1 >New Transcation</h1>
 <%= form_with(model: entity, url: group_entities_path, method: :post, data: {turbo: false}) do |form| %>
   <% if entity.errors.any? %>
     <div style="color: red">
@@ -11,21 +13,22 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
+  <div class="field__box">
+    <%= form.label :name, style: "display: block", class: "email" %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
-    <%= form.label :amount, style: "display: block" %>
+  <div class="field__box">
+    <%= form.label :amount, style: "display: block", class: "email" %>
     <%= form.text_field :amount %>
   </div>
 
-  <div>
-  <%= form.collection_select :group_id, Group.where(user_id: current_user.id).order(:name), :id, :name, {prompt: 'Category'}%>
+  <div class="field__box">
+  <%= form.collection_select :group_id, Group.where(user_id: current_user.id).order(:name), :id, :name, {prompt: 'Category'}, class: "email remember"%>
   </div>
 
-  <div>
+  <div class="field__box ">
     <%= form.submit %>
   </div>
 <% end %>
+</div>
