@@ -1,8 +1,9 @@
-databases:
-  - name: postgres
+services:
+  - type: postgres
+    name: postgres
+    plan: free
     ipAllowList: []
 
-services:
   - type: web
     name: rails
     env: ruby
@@ -15,8 +16,9 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
+
   - type: redis
     name: redis
-    ipAllowList: []
     plan: free
+    ipAllowList: []
     maxmemoryPolicy: noeviction
