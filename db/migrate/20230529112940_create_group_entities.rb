@@ -4,7 +4,7 @@ class CreateGroupEntities < ActiveRecord::Migration[7.0]
 
     create_table :group_entities do |t|
       t.references :group, null: false, foreign_key: true
-      t.references :operation, null: false, foreign_key: true
+      t.references :entity, null: false, foreign_key: true
       t.timestamps
     end
   end
