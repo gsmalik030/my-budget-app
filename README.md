@@ -20,6 +20,10 @@ Its a budget website.
 
 ## 🛠 Built With <a name="built-with"></a>
 
+## Live Version
+
+- A live version of the project can be seen [here](https://my-budget-app-nhy1.onrender.com/)
+
 ### Tech Stack <a name="tech-stack"></a>
 
 - Languages: Ruby on rails
@@ -36,7 +40,9 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- ruby installed and running
+- Ruby runtime environment
+- PostgreSQL
+- Rails
 
 ### Setup
 
@@ -51,10 +57,10 @@ In order to run this project you need:
   ```bash
   cd my-budget-app
   ```
-
-- On the command line, at the project's root, run `bundle install` to imy-budget-app dependencies
-
-- Next, run `ruby main.rb` which will rmy-budget-app in the development mode.
+- Use the following commands to
+    - install necessary gems `bundle install`
+    - install necessary javascript packages `npm install`
+    - run the development server `rails server
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -66,11 +72,6 @@ In order to run this project you need:
 - Twitter: [@twitterhandle](https://twitter.com/gsmalik030)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ghulam-subbhani-4b1281252/)
 
-👤 **Emmanuel Simasiku**
-
-- GitHub: [Emmanuel-Simasiku](https://github.com/Mukumbuta)
-- Twitter: [@twitterhandle](https://twitter.com/Mukumbuta8)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mukumbuta/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -96,7 +97,9 @@ If you like this project, please give it a ⭐️!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- Thanks to my learning and coding partners for all their support.
+- Original [design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
+- Hat tip to anyone whose code was used
+- Inspiration
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
