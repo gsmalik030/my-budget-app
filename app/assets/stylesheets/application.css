@@ -141,7 +141,10 @@ a{
 .add-category{
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+    right: 2rem;
 }
 
 .new-group{
