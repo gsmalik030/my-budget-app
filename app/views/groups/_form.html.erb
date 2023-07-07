@@ -1,0 +1,31 @@
+<div class="container">
+<h1 >New Category</h1>
+<%= form_with(model: group, data: {turbo: false}) do |form| %>
+  <% if group.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+        <% group.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field__box">
+    <%= form.label :name, style: "display: block", class: "email" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field__box">
+    <%= form.label :icon, style: "display: block", class: "email" %>
+    <%= form.url_field :icon %>
+  </div>
+
+  <div class="field__box new-group">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+</div>

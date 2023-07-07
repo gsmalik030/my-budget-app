@@ -1,0 +1,17 @@
+<section>
+<h1>Transcations</h1>
+
+
+<div id="entities" class="categories">
+  <% @entities.each do |entity| %>
+    <%= render entity %>
+  <% end %>
+</div>
+
+<div class= "total">
+<p>Total :</p>
+<p><%= @group.entities.sum(&:amount) %>$</p>
+</div>
+
+<%= link_to "New Transcation", new_group_entity_path(@group), class: "add-category btn btn__sign-in" %>
+</section>

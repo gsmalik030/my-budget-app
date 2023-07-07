@@ -1,0 +1,17 @@
+<div class= "category__box">
+<div class= "category">
+<%= image_tag @group.icon, alt: 'Icon', class: "group__img" %>
+<div>
+<h2> <%= entity.name%></h2>
+<p><%= entity.created_at.strftime("%a, %d %b %Y %H:%M") %></p>
+</div>
+</div>
+<div>
+<p class= "amount"><%=entity.amount%></p>
+<% if can? :manage, entity%>
+<%= button_to "Delete", group_entity_path(@group.id, entity), method: :delete, class: "btn-delete"%>
+<%end%>
+</div>
+</div>
+
+

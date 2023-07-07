@@ -1,15 +1,159 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: rgb(234,238,67);
+    background: linear-gradient(90deg, rgba(234,238,67,1) 15%, rgba(90,238,227,1) 85%);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+input{
+    outline: none;
+    font-size: 1.8rem;
+    padding: .8rem;
+    border-radius: 8px;
+    border: none;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.box{
+    display: flex;
+    gap: .2rem;
+    flex-direction: column;
+}
+
+.btn{
+    font-size: 1.5rem;
+    padding: 1rem 10rem;
+    border-radius: 8px;
+}
+
+.btn__sign-in{
+    color: aliceblue;
+    background-color: #3D8BD9;
+}
+
+.btn__sign-up{
+    color: black;
+    background-color: gainsboro;
+}
+
+.email{
+    font-size: 1.8rem;
+    margin: .5 0;
+}
+
+.btn__forgot{
+    font-size: 1.5rem;
+}
+
+.btn_link{
+    padding: 1rem 5rem;
+    font-size: 1.5rem;
+}
+
+.btn__login{
+    padding: .8rem 5rem;
+    border-radius: 8px;
+    border: none;
+}
+
+.field__box{
+    display: flex;
+    flex-direction: column;
+}
+
+.remember{
+    margin: .8rem 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    gap: 2rem;
+}
+
+.nav__link{
+    color: aliceblue;
+}
+
+.nav__box{
+    background-color: #3D8BD9;
+    width: 100%;
+}
+
+.group__img{
+    width: 8rem;
+    border-radius: 4rem;
+}
+
+.category__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.category{
+    display: flex;
+    gap: 1rem;
+}
+
+.amount{
+    font-size: 1.8rem;
+}
+
+.btn-delete{
+    border: none;
+    border-radius: 8px;
+    padding: .5rem 2rem;
+}
+
+.categories{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.add-category{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+    right: 2rem;
+}
+
+.new-group{
+    margin: 1.5rem;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    margin: 0 2rem;
+}

@@ -1,0 +1,34 @@
+<div class="container">
+<h1 >New Transcation</h1>
+<%= form_with(model: entity, url: group_entities_path, method: :post, data: {turbo: false}) do |form| %>
+  <% if entity.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
+
+      <ul>
+        <% entity.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field__box">
+    <%= form.label :name, style: "display: block", class: "email" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field__box">
+    <%= form.label :amount, style: "display: block", class: "email" %>
+    <%= form.text_field :amount %>
+  </div>
+
+  <div class="field__box">
+  <%= form.collection_select :group_id, Group.where(user_id: current_user.id).order(:name), :id, :name, {prompt: 'Category'}, class: "email remember"%>
+  </div>
+
+  <div class="field__box ">
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>

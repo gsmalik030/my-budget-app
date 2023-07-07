@@ -1,0 +1,12 @@
+
+<section>
+<h1>Categories</h1>
+
+<div id="groups" class="categories">
+  <% @groups.each do |group| %>
+    <%= render group %>
+  <% end %>
+  <%= link_to "Add New Category", new_group_path, class: "add-category btn btn__sign-in" %>
+</div>
+
+</section>
